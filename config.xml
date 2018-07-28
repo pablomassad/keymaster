@@ -115,11 +115,11 @@
         <variable name="GEOLOCATION_USAGE_DESCRIPTION" value="To locate you" />
     </plugin>
     <plugin name="phonegap-nfc" spec="^0.7.1" />
-    <plugin name="cordova-plugin-fcm" spec="^2.1.2" />
     <plugin name="cordova-plugin-file" spec="^4.3.3" />
     <plugin name="cordova-plugin-file-transfer" spec="^1.6.3" />
     <plugin name="cordova-plugin-zip" spec="^3.1.0" />
     <engine name="browser" spec="5.0.1" />
     <engine name="android" spec="~6.3.0" />
     <plugin name="cordova-plugin-code-push" spec="^1.11.11" />
+    <plugin name="onesignal-cordova-plugin" spec="^2.4.1" />
 </widget>

@@ -3,8 +3,6 @@ import { NavController, Platform } from 'ionic-angular';
 import { ApplicationService, GlobalService } from 'fwk-services';
 import { Empleado } from '../../shared/entities/empleado';
 
-declare const FCMPlugin: any;
-
 @IonicPage()
 @Component({
    selector: 'page-login',
@@ -49,44 +47,9 @@ export class LoginPage implements OnInit, OnDestroy {
             this.navCtrl.push('UsuarioPage', {});
             break;
       }
-      this.globalSrv.save('user', this.userInfo);
-      this.initFCM(this.userInfo.legajo);
+      this.globalSrv.save('user', this.userInfo)
    }
-   private initFCM(usr) {
-      if (((this.platform.is('mobileweb') == true) || (this.platform.is('core') == true)) == false) {
-         var self = this;
-         FCMPlugin.getToken(
-            function (id) {
-               console.log(id);
-               //self.registerUser(self.user, id);
-            },
-            function (err) {
-               console.log('error retrieving token: ' + err);
-            }
-         );
 
-         FCMPlugin.subscribeToTopic(usr);
-         //FCMPlugin.subscribeToTopic('registrationTopic');
-         //FCMPlugin.unsubscribeFromTopic('topicExample');
-
-         // FCMPlugin.onTokenRefresh().subscribe(id=>{
-         //   alert('token refresh!');
-         //   this.registerUser(this.user, id);
-         // })
-
-         FCMPlugin.onNotification(
-            function (data) {
-               self.evalNotification(data);
-            },
-            function (msg) {
-               console.log('onNotification callback successfully registered: ' + msg);
-            },
-            function (err) {
-               console.log('Error registering onNotification callback: ' + err);
-            }
-         );
-      }
-   }
    private evalNotification(data) {
       if (data.type == "registro") {
          this.appSrv.message('Se ha registrado la llave ' + data.llave);

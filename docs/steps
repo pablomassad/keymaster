@@ -60,19 +60,3 @@ firebase deploy --only functions:xxxx
 
 // FIRESTORE
 sudo npm install firebase angularfire2 --save
-
-// FCM Notifications
-Cambiar config.xml ID (app.xxx.com)
-En sitio Firebase Agregar FB a android, obtener google-services.json
-
-ionic cordova plugin add cordova-plugin-fcm --save 
-
-(Eventualmente HACK ):
-- /plugins/plugin-cordova-fcm/src/android/fcmplugin.grandle  
-- com.google.gsm:google-services:3.0.0
-
-/* Codigo en app */
-declare const FCMPlugin:any;
-FCMPlugin.subscribeToTopic('registrationTopic ');
-
-npm install fcm-node --save
