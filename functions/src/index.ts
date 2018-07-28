@@ -34,7 +34,9 @@ function llaveDisponible(llave, flag) {
    .then(doc => {
        const ll = doc.data();
        ll.disponible = flag;
-       ref.set(ll).then(c => console.log('Llave disponible:', flag));
+       ref.set(ll)
+       .then(c => console.log('Llave disponible:', flag))
+       .catch(err=>console.log('Error: ', err))
    })
    .catch(err => {
        console.log('Error: updating key state:', err);
@@ -46,18 +48,18 @@ function moveToHistorico(val,rid){
    console.log('registro ID: ', rid);
    
    const refHist = admin.firestore().collection('historico').doc(rid).set(val)
-   .then(c => console.log('Registro copiado a Historico'))
+   .then(() => console.log('Registro copiado a Historico'))
    .catch(err => console.log('Error copy to historico:", err'));
 
    const refReg = admin.firestore().collection('registros').doc(rid).delete()
-   .then(c => console.log('Registro borrado'))
+   .then(() => console.log('Registro borrado'))
    .catch(err => console.log('Error deleting reg: ', err));
 
    return refReg;
 }
 function sendMessageToUser(msg) {
-   var target = "/topics/" + msg.emp;
-   var payload = {
+   const target = "/topics/" + msg.emp;
+   const payload = {
        to: target,
        priority: 'high',
        // collapseKey :'',
@@ -78,7 +80,7 @@ function sendMessageToUser(msg) {
        data: { type: msg.tipo, llave: msg.llave, idReg: msg.id }
    };
    //proxy: proxyCfg.url,
-   var res = request({
+   const res = request({
        url: 'https://fcm.googleapis.com/fcm/send',
        method: 'POST',
        headers: {

@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { NavController, Platform } from 'ionic-angular';
+import { NavController, Platform, IonicPage } from 'ionic-angular';
 import { ApplicationService, GlobalService } from 'fwk-services';
 import { Empleado } from '../../shared/entities/empleado';
 
@@ -21,7 +21,7 @@ export class LoginPage implements OnInit, OnDestroy {
    ) {
       console.log('LoginPage constructor');
    }
-   ngOnDestroy(){
+   ngOnDestroy() {
       console.log('LoginPage destroy');
    }
    ngOnInit() {
