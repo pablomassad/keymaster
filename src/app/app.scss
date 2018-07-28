@@ -1,0 +1,82 @@
+@import "../theme/icons";
+
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+.progBar{
+   position: absolute;
+   margin-top:60px;
+   width: 100%;
+   z-index: 100;
+}
+
+.backKM {
+    background: radial-gradient(#def 0%, #8ebbd0 92%);
+    margin-top: 60px;
+    height: calc( 100vh - 44px);
+    padding: 20px;
+}
+
+.titulo{
+    text-shadow: 1px 1px 1px grey;
+    vertical-align: super;
+    font-size: 25px;
+    margin-left: 30px;
+}
+.logo{
+    width: 55px;
+    margin-top: 10px;
+    margin-left: -5px;
+}
+
+.toast-success {
+> div{
+        background-color:green!important;
+    }
+}
+
+.toast-error {
+> div{
+        background-color:red!important;
+    }
+}
+
+
+
+
+
+
+.qrId {
+    text-align: center;
+    margin: 15px;
+}
+
+.qrKey {
+    margin:auto;
+}
+
+
+.iconStatus{
+    color: #bbb;
+    margin-top: 10px;
+    float: right;
+    font-size: 30px;
+ }
+
+ .iconStatusON{
+    color: black;
+ }
+

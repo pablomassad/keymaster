@@ -1,0 +1,89 @@
+page-usuario {
+
+// .ion-page > ion-content {
+//     background: radial-gradient(#def 0%, #8ebbd0 92%);
+// }
+
+    .qrUser {
+        position: absolute;
+        top: 15px;
+        right: 7%;
+    }
+
+
+
+    .qrcode img{
+        width: 100px;
+        float: right;
+        box-shadow: 1px 1px 4px #868686;
+    }
+
+    .campoIds {
+        font-weight: bold;
+        width: 70px;
+        float: left;
+    }
+    .padInfo{
+        width: 90%;
+        margin: auto; 
+        margin-top: 10px;
+    }
+
+    .btnAction {
+        padding: 10px;
+        height: 40px;
+        width: 80%;
+        border-radius: 5px;
+        box-shadow: 3px 3px 5px #444;
+    }
+
+    .keyIcon{
+        margin-top:-25px;
+        font-size: 130px;
+        color:white;
+        text-shadow: 2px 2px 2px black;
+        text-align: center;
+    }
+    .keyText{
+        text-align: center;
+        font-size: 25px;
+        color:white;
+        font-weight: bold;
+        margin-top: -30px;
+        text-shadow: 1px 1px 3px black;
+    }
+
+
+    .glass{
+        margin: auto;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%; 
+        padding: 15px 25px;
+        background-color: green; /*for compatibility with older browsers*/
+        background-image: linear-gradient(lightgreen,green);
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        -webkit-box-shadow: 2px 2px 4px grey;
+        box-shadow: 2px 2px 4px grey;
+    }
+
+
+    // .glass:after{
+    //     content: '';
+    //     position: absolute;
+    //     top: 2px;
+    //     left: 2px;
+    //     width: calc(100% - 4px);
+    //     height: 50%;
+    //     background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+    // }
+
+
+    .btnTransfer{
+        border-radius: 50%;
+        margin-left: 10px;
+    }
+
+}

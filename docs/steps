@@ -1,0 +1,78 @@
+install nodejs
+sudo npm install -g ionic cordova
+sudo npm install -g ionic@latest
+ionic info
+ionic start myApp blank (sidemenu, tabs, etc...)
+ionic serve -p $PORT -r 8081 -l // lab mode
+
+Modificar config.xml (titulo)
+Modificar ionic.config.json (titulo)
+
+
+npm install @ionic-native/core --save
+
+ionic resources
+ionic cordova platform add android 
+ionic cordova platform add browser  =======> ionic cordova run browser
+ionic cordova run android --prod --release
+ionic cordova build android --release
+sudo chmod -R 777 /Applications/Android\ Studio.app
+
+
+npm install --save ngx-qrcode2
+ionic cordova plugin add phonegap-plugin-barcodescanner
+npm install --save @ionic-native/barcode-scanner
+
+ionic cordova plugin add cordova-plugin-camera
+npm install --save @ionic-native/camera
+
+ionic cordova plugin add cordova-plugin-flashlight
+npm install --save @ionic-native/flashlight
+
+ionic cordova plugin add cordova-plugin-geolocation --variable GEOLOCATION_USAGE_DESCRIPTION="To locate you"
+npm install --save @ionic-native/geolocation
+
+ionic cordova plugin add phonegap-nfc
+npm install --save @ionic-native/nfc
+
+
+
+npm run build
+
+
+// FIREBASE
+npm install @google-cloud/storage --save
+
+npm install -g firebase-tools
+mkdir firebase-functions
+cd firebase-functions
+firebase --version
+firebase login --no-localhost
+login by gmail.... => authorization code:
+( 4/i83gEkbippOMRq4OemlfBADyh6gRzcVxW3UUJDk2850 )
+( 4/T7GXxsq1GggRPtxj0dfKx0JJpdypFl28ZQWhlf4Kack ) 4/11/17
+
+firebase init
+cd functions
+nano .gitignore  (node_modules)
+editar archivo:  index.js
+firebase deploy --only functions:xxxx
+
+// FIRESTORE
+sudo npm install firebase angularfire2 --save
+
+// FCM Notifications
+Cambiar config.xml ID (app.xxx.com)
+En sitio Firebase Agregar FB a android, obtener google-services.json
+
+ionic cordova plugin add cordova-plugin-fcm --save 
+
+(Eventualmente HACK ):
+- /plugins/plugin-cordova-fcm/src/android/fcmplugin.grandle  
+- com.google.gsm:google-services:3.0.0
+
+/* Codigo en app */
+declare const FCMPlugin:any;
+FCMPlugin.subscribeToTopic('registrationTopic ');
+
+npm install fcm-node --save
