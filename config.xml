@@ -1,6 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.teco.keymaster" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <platform name="android">
+        <preference name="CodePushDeploymentKey" value="IO6989XjYsvuIn0i3578pm91wF5H3236c95e-519c-4873-a67d-fd25982456aa" />
+    </platform>
+    <platform name="android">
         <preference name="CodePushDeploymentKey" value="p_wHG1073ycdRDUg6HCKaZhryLg-36782d21-3e82-4316-9366-3e8515e3da2b" />
         <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
         <icon density="mdpi" src="resources/android/icon/drawable-mdpi-icon.png" />
@@ -113,10 +116,10 @@
     </plugin>
     <plugin name="phonegap-nfc" spec="^0.7.1" />
     <plugin name="cordova-plugin-fcm" spec="^2.1.2" />
-    <plugin name="cordova-plugin-code-push" spec="^1.11.11" />
     <plugin name="cordova-plugin-file" spec="^4.3.3" />
     <plugin name="cordova-plugin-file-transfer" spec="^1.6.3" />
     <plugin name="cordova-plugin-zip" spec="^3.1.0" />
     <engine name="browser" spec="5.0.1" />
     <engine name="android" spec="~6.3.0" />
+    <plugin name="cordova-plugin-code-push" spec="^1.11.11" />
 </widget>

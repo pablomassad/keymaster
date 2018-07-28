@@ -25,7 +25,7 @@
     "@google-cloud/storage": "1.7.0",
     "@ionic-native/barcode-scanner": "4.9.0",
     "@ionic-native/camera": "4.9.0",
-    "@ionic-native/code-push": "^4.10.0",
+    "@ionic-native/code-push": "^4.10.1",
     "@ionic-native/core": "4.9.0",
     "@ionic-native/flashlight": "4.9.0",
     "@ionic-native/geolocation": "4.9.0",
